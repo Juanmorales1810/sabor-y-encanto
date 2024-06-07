@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
                 {items.map((item, idx) => (
                     <li
                         className="w-[350px] max-w-full relative rounded-3xl flex-shrink-0 md:w-[450px]"
-                        key={item.name}
+                        key={item.name + idx}
                     >
                         <figure className="relative group rounded-3xl ">
                             <div className="relative rounded-3xl ">

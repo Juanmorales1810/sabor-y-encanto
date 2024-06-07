@@ -4,6 +4,7 @@ import CardComent from "@/components/cardComent";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
+import { CallIcon, GpsIcon, WhatsAppLogo } from "@/components/icons";
 
 const menu = [
 	{
@@ -87,7 +88,13 @@ export default function Home() {
 					<h1 className="text-primary text-2xl text-center pb-4"><strong className="text-4xl">Restaurante Sabor y Encanto</strong><br /><small>La Auténtica Gastronomía Peruana en La Serena, Chile</small></h1>
 					<h2 className="text-center text-secondary pb-2">Disfruta de una Experiencia Culinaria Única con los Sabores Tradicionales de Perú
 					</h2>
-					<Button color="primary" as={Link} href="tel:+56987060388" className="">
+					<Button
+						className="font-medium"
+						as={Link}
+						href="tel:+56987060388"
+						color="primary"
+						endContent={<CallIcon className="fill-zinc-50" />}
+					>
 						Reserva ahora
 					</Button>
 				</div>
@@ -100,11 +107,25 @@ export default function Home() {
 					<h3 className="uppercase text-4xl text-secondary font-bold pb-4">Bienvenidos</h3>
 					<p className="text-pretty text-base md:text-xl px-2">Descubre Sabor y Encanto, un restaurante en La Serena, Chile, que celebra la rica y diversa gastronomía peruana. Ubicado en el corazón de la ciudad, nuestro espacio te invita a un viaje culinario a través del Perú, desde la costa hasta los Andes y la selva. Disfruta de ceviches frescos, suculentos anticuchos y el clásico lomo saltado, todos preparados con ingredientes auténticos y técnicas tradicionales. Nuestro ambiente acogedor y elegante, junto con un servicio cálido y atento, hacen de cada visita una experiencia inolvidable. Ven y déjate seducir por los sabores únicos de Sabor y Encanto.
 					</p>
-					<div className="flex gap-2 pt-8">
-						<Button variant="shadow" color="secondary" as={Link} href="tel:+56987060388" className="">
+					<div className="flex flex-col gap-2 pt-8 md:flex-row">
+						<Button
+							className="font-medium"
+							as={Link}
+							href={`https://wa.me/+56987060388?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊`}
+							variant="shadow"
+							color="secondary"
+							endContent={<WhatsAppLogo />}
+						>
 							Háblanos al WhatsApp
 						</Button>
-						<Button variant="ghost" color="secondary" as={Link} href="tel:+56987060388" className="text-md">
+						<Button
+							className="text-md group"
+							as={Link}
+							href="tel:+56987060388"
+							variant="ghost"
+							color="secondary"
+							endContent={<CallIcon className="fill-secondary-500 group-hover:fill-black transition-colors" />}
+						>
 							Consulta disponibilidad
 						</Button>
 					</div>
@@ -147,11 +168,25 @@ export default function Home() {
 				<div className="flex flex-col gap-2 justify-center items-center text-center px-2 md:flex-row md:gap-8 md:max-w-5xl">
 					<p className="text-pretty text-xl px-2">En Sabor y Encanto, nos enorgullecemos de ofrecer una experiencia culinaria auténtica que celebra la rica herencia de la gastronomía peruana. Nuestro chef, con vasta experiencia en la cocina peruana, se dedica a crear platos que honran las tradiciones y sabores de Perú.
 					</p>
-					<div className="flex justify-center items-center h-full w-full gap-2 py-8">
-						<Button variant="shadow" color="secondary" as={Link} href="tel:+56987060388" className="">
+					<div className="flex flex-col justify-center items-center h-full gap-2 py-8">
+						<Button
+							className="font-medium w-full"
+							as={Link}
+							href={`https://wa.me/+56987060388?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊`}
+							variant="shadow"
+							color="secondary"
+							endContent={<WhatsAppLogo />}
+						>
 							Háblanos al WhatsApp
 						</Button>
-						<Button variant="ghost" color="secondary" as={Link} href="tel:+56987060388" className="text-md">
+						<Button
+							className="text-md group"
+							as={Link}
+							href="tel:+56987060388"
+							variant="ghost"
+							color="secondary"
+							endContent={<CallIcon className="fill-secondary-500 group-hover:fill-black transition-colors" />}
+						>
 							Consulta disponibilidad
 						</Button>
 					</div>
@@ -162,6 +197,33 @@ export default function Home() {
 					{testimonials.map((item, index) => (
 						<CardComent key={index} srcImg={item.srcImg} Name={item.Name} Quote={item.Qoute} />
 					))}
+				</div>
+			</section>
+			<section className="flex justify-center items-center py-16 w-full px-2">
+				<div className="relative w-full h-full max-w-[600px] md:gap-8">
+					<div className="w-full h-[400px]">
+						<Image className="rounded-3xl object-cover w-full h-[400px]" src="/mapa/pixelcut-export.png" alt="Logo Sabor y encanto" width={600} height={400} />
+					</div>
+					<div className="absolute inset-0 flex flex-col justify-center items-center gap-2 bg-zinc-950/80 h-[400px] rounded-3xl px-4 py-8">
+						<div className="text-center">
+							<h2 className="text-4xl text-primary font-semibold py-4">Ubicación</h2>
+							<p className="text-pretty text-xl pt-2 pb-6">Sabor y Encanto se encuentra en el corazón de La Serena, Chile, en la Avenida Islón 1234.
+							</p>
+						</div>
+						<div className="mx-auto">
+							<Button
+								className="font-medium"
+								as={Link}
+								isExternal
+								href="https://www.google.com/maps/place/Sabor+y+Encanto+Comida+Peruana/@-29.8882882,-71.2304425,15z/data=!4m2!3m1!1s0x0:0xa84a9f35e92ef28?sa=X&ved=1t:2428&ictx=111&cshid=1717541827914301"
+								variant="shadow"
+								color="secondary"
+								endContent={<GpsIcon />}
+							>
+								Obtener Direcciones
+							</Button>
+						</div>
+					</div>
 				</div>
 			</section>
 

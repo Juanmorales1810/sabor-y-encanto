@@ -15,6 +15,7 @@ import { Link } from "@nextui-org/link";
 import NextLink from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
+import { WhatsAppLogo } from "./icons";
 
 
 export const Navbar = () => {
@@ -55,16 +56,30 @@ export const Navbar = () => {
                     <ThemeSwitch />
                 </NavbarItem> */}
                 <NavbarItem className="hidden sm:flex gap-2">
-                    <Button color="secondary" as={Link} href="tel:+56987060388">
-                        Reserva ahora
+                    <Button
+                        className="font-medium"
+                        as={Link}
+                        isExternal
+                        color="secondary"
+                        href={`https://wa.me/+56987060388?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊`}
+                        endContent={<WhatsAppLogo />}
+                    >
+                        Reserva por WhatsApp
                     </Button>
                 </NavbarItem>
             </NavbarContent>
 
             <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
                 {/* <ThemeSwitch /> */}
-                <Button color="secondary" as={Link} href="tel:+56987060388">
-                    Reserva ahora
+                <Button
+                    className="font-medium"
+                    as={Link}
+                    isExternal
+                    color="secondary"
+                    href={`https://wa.me/+56987060388?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊`}
+                    endContent={<WhatsAppLogo />}
+                >
+                    Reserva por WhatsApp
                 </Button>
                 <NavbarMenuToggle />
             </NavbarContent>
