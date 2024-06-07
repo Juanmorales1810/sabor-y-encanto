@@ -17,7 +17,7 @@ export default function CardComent(props: propsInterface) {
                 <h3 className="absolute text-pretty text-xl font-bold text-primary ">{Name}</h3>
             </header>
             <main className="basis-1/2">
-                <p className="text-pretty text-md text-center px-2 text-zinc-300 font-medium">"{Quote}"</p>
+                <p className="text-pretty text-md text-center px-2 text-zinc-300 font-medium">&quot;{Quote}&quot;</p>
                 <p className="text-2xl font-bold bg-gradient-to-bl from-yellow-500 via-yellow-400 to-amber-600 bg-clip-text text-transparent">★★★★★</p>
             </main>
             <footer className="basis-1/4">
