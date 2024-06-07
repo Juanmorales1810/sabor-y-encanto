@@ -1,9 +1,9 @@
+import { InfiniteMovingCards } from "@/components/infinityCard";
 import BackgroundSwipe from "@/components/backgroundswipe";
+import CardComent from "@/components/cardComent";
+import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
-import { Button } from "@nextui-org/button";
-import { InfiniteMovingCards } from "@/components/infinityCard";
-import CardComent from "@/components/cardComent";
 
 const menu = [
 	{
@@ -95,12 +95,12 @@ export default function Home() {
 					<BackgroundSwipe />
 				</div>
 			</section>
-			<section className="flex justify-center items-center bg-primary py-8 px-2 w-full">
-				<div className="flex flex-col h-full max-w-5xl justify-center items-center text-center">
+			<section className="flex justify-center items-center bg-primary py-8 w-full">
+				<div className="flex flex-col px-4 justify-center items-center text-center md:max-w-5xl">
 					<h3 className="uppercase text-4xl text-secondary font-bold pb-4">Bienvenidos</h3>
-					<p className="text-pretty text-base md:text-xl">Descubre Sabor y Encanto, un restaurante en La Serena, Chile, que celebra la rica y diversa gastronomía peruana. Ubicado en el corazón de la ciudad, nuestro espacio te invita a un viaje culinario a través del Perú, desde la costa hasta los Andes y la selva. Disfruta de ceviches frescos, suculentos anticuchos y el clásico lomo saltado, todos preparados con ingredientes auténticos y técnicas tradicionales. Nuestro ambiente acogedor y elegante, junto con un servicio cálido y atento, hacen de cada visita una experiencia inolvidable. Ven y déjate seducir por los sabores únicos de Sabor y Encanto.
+					<p className="text-pretty text-base md:text-xl px-2">Descubre Sabor y Encanto, un restaurante en La Serena, Chile, que celebra la rica y diversa gastronomía peruana. Ubicado en el corazón de la ciudad, nuestro espacio te invita a un viaje culinario a través del Perú, desde la costa hasta los Andes y la selva. Disfruta de ceviches frescos, suculentos anticuchos y el clásico lomo saltado, todos preparados con ingredientes auténticos y técnicas tradicionales. Nuestro ambiente acogedor y elegante, junto con un servicio cálido y atento, hacen de cada visita una experiencia inolvidable. Ven y déjate seducir por los sabores únicos de Sabor y Encanto.
 					</p>
-					<div className="flex gap-4 pt-8">
+					<div className="flex gap-2 pt-8">
 						<Button variant="shadow" color="secondary" as={Link} href="tel:+56987060388" className="">
 							Háblanos al WhatsApp
 						</Button>
@@ -118,8 +118,8 @@ export default function Home() {
 						<Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 					</div>
 					<div className="flex flex-col gap-2 w-96 justify-center text-left">
-						<h2 className="text-4xl text-primary-500 font-semibold">Ceviche Fresco</h2>
-						<p className="text-2xl">Pescado del día marinado en jugo de limón, acompañado de camote y choclo.
+						<h2 className="text-4xl text-primary-500 font-semibold px-2">Ceviche Fresco</h2>
+						<p className="text-2xl px-2">Pescado del día marinado en jugo de limón, acompañado de camote y choclo.
 						</p>
 					</div>
 				</div>
@@ -129,8 +129,8 @@ export default function Home() {
 						<Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30" src="/platos/fotos oficiales.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 					</div>
 					<div className="flex flex-col gap-2 w-96 justify-center text-right">
-						<h2 className="text-4xl text-primary-500 font-semibold">Anticuchos</h2>
-						<p className="text-2xl">Corazón de res marinado y asado, servido con papas doradas y ají.
+						<h2 className="text-4xl text-primary-500 font-semibold px-2">Anticuchos</h2>
+						<p className="text-2xl px-2">Corazón de res marinado y asado, servido con papas doradas y ají.
 						</p>
 					</div>
 				</div>
@@ -144,10 +144,10 @@ export default function Home() {
 				/>
 			</section>
 			<section className="flex justify-center items-center bg-primary py-8 w-full">
-				<div className="flex flex-col h-full max-w-5xl gap-2 justify-center items-center text-center px-2 md:flex-row md:gap-8">
-					<p className="text-pretty text-xl">En Sabor y Encanto, nos enorgullecemos de ofrecer una experiencia culinaria auténtica que celebra la rica herencia de la gastronomía peruana. Nuestro chef, con vasta experiencia en la cocina peruana, se dedica a crear platos que honran las tradiciones y sabores de Perú.
+				<div className="flex flex-col gap-2 justify-center items-center text-center px-2 md:flex-row md:gap-8 md:max-w-5xl">
+					<p className="text-pretty text-xl px-2">En Sabor y Encanto, nos enorgullecemos de ofrecer una experiencia culinaria auténtica que celebra la rica herencia de la gastronomía peruana. Nuestro chef, con vasta experiencia en la cocina peruana, se dedica a crear platos que honran las tradiciones y sabores de Perú.
 					</p>
-					<div className="flex justify-center items-center h-full w-full gap-4 py-8">
+					<div className="flex justify-center items-center h-full w-full gap-2 py-8">
 						<Button variant="shadow" color="secondary" as={Link} href="tel:+56987060388" className="">
 							Háblanos al WhatsApp
 						</Button>
