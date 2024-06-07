@@ -6,12 +6,13 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
+import Footer from "@/components/footer";
 
 export const viewport: Viewport = {
-    themeColor: [
-        { color: "#06b6d4", media: "(prefers-color-scheme: light)" },
-        { color: "#06b6d4", media: "(prefers-color-scheme: light)" },
-    ],
+	themeColor: [
+		{ color: "#06b6d4", media: "(prefers-color-scheme: light)" },
+		{ color: "#06b6d4", media: "(prefers-color-scheme: light)" },
+	],
 }
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="es" suppressHydrationWarning>
 			<head />
 			<body
 				className={clsx(
@@ -42,22 +43,13 @@ export default function RootLayout({
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col h-screen">
+					<div className="relative flex flex-col h-full bg-zinc-950">
+						<div className="absolute inset-0 z-10 h-full w-full bg-[linear-gradient(to_right,#141414_1px,transparent_2px),linear-gradient(to_bottom,#141414_1px,transparent_2px)] bg-[size:4rem_4rem]"></div>
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						<main className="mx-auto w-full flex-grow z-20">
 							{children}
 						</main>
-						<footer className="w-full flex items-center justify-center py-3">
-							<Link
-								isExternal
-								className="flex items-center gap-1 text-current"
-								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-								title="nextui.org homepage"
-							>
-								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
-							</Link>
-						</footer>
+						<Footer />
 					</div>
 				</Providers>
 			</body>

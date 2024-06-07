@@ -1,14 +1,10 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-    name: "Next.js + NextUI",
+    name: "Sabor y Encanto",
     description:
-        "Make beautiful websites regardless of your design experience.",
+        "Descubre Sabor y Encanto, un restaurante en La Serena, Chile, que celebra la rica y diversa gastronomía peruana. Ubicado en el corazón de la ciudad, nuestro espacio te invita a un viaje culinario a través del Perú, desde la costa hasta los Andes y la selva.",
     navItems: [
-        {
-            label: "Home",
-            href: "/",
-        },
         {
             label: "Pricing",
             href: "/pricing",
@@ -24,10 +20,6 @@ export const siteConfig = {
     ],
     navMenuItems: [
         {
-            label: "Home",
-            href: "/",
-        },
-        {
             label: "Pricing",
             href: "/pricing",
         },
@@ -40,11 +32,4 @@ export const siteConfig = {
             href: "/about",
         },
     ],
-    links: {
-        github: "https://github.com/nextui-org/nextui",
-        twitter: "https://twitter.com/getnextui",
-        docs: "https://nextui.org",
-        discord: "https://discord.gg/9b6yyZKmH4",
-        sponsor: "https://patreon.com/jrgarciadev",
-    },
 };
