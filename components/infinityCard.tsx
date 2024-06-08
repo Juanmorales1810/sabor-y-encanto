@@ -15,7 +15,7 @@ export const InfiniteMovingCards = ({
     items: {
         quote: string;
         name: string;
-        title: string;
+        imageSrc: string;
     }[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
@@ -89,15 +89,15 @@ export const InfiniteMovingCards = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        className="w-[350px] max-w-full relative rounded-3xl flex-shrink-0 md:w-[450px]"
+                        className="w-[350px] max-w-full relative rounded-3xl flex-shrink-0 select-none md:w-[450px]"
                         key={item.name + idx}
                     >
                         <figure className="relative group rounded-3xl ">
                             <div className="relative rounded-3xl ">
-                                <Image className="absolute inset-0 z-30 blur-md rounded-3xl object-cover w-[500] h-[300px] scale-50 group-hover:scale-100 transition-transform hidden md:block" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={450} height={300} />
-                                <Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30 hidden md:block" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={450} height={300} />
-                                <Image className="absolute inset-0 z-30 blur-md rounded-3xl object-cover w-[500] h-[200px] scale-50 group-hover:scale-100 transition-transform md:hidden" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={450} height={300} />
-                                <Image className="relative rounded-3xl object-cover w-[500] h-[200px] z-30 md:hidden" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={450} height={300} />
+                                <Image className="absolute inset-0 z-30 blur-md rounded-3xl object-cover w-[500] h-[300px] scale-50 group-hover:scale-100 transition-transform hidden md:block" src={item.imageSrc} alt={item.name} width={450} height={300} />
+                                <Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30 hidden md:block" src={item.imageSrc} alt={item.name} width={450} height={300} />
+                                <Image className="absolute inset-0 z-30 blur-md rounded-3xl object-cover w-[500] h-[200px] scale-50 group-hover:scale-100 transition-transform md:hidden" src={item.imageSrc} alt={item.name} width={450} height={300} />
+                                <Image className="relative rounded-3xl object-cover w-[500] h-[200px] z-30 md:hidden" src={item.imageSrc} alt={item.name} width={450} height={300} />
                             </div>
                             <div className="absolute inset-0 z-40 px-8 py-4 flex flex-col justify-center items-center bg-zinc-950/80 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
                                 <span className=" relative z-20 text-sm text-pretty leading-[1.6] text-gray-100 font-normal">
