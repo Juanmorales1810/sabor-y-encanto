@@ -1,3 +1,5 @@
+"use client";
+
 import {
     Navbar as NextUINavbar,
     NavbarContent,
@@ -12,18 +14,20 @@ import { link as linkStyles } from "@nextui-org/theme";
 import { Button } from "@nextui-org/button";
 import { siteConfig } from "@/config/site";
 import { Link } from "@nextui-org/link";
+import { WhatsAppLogo } from "./icons";
 import NextLink from "next/link";
+import { useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { WhatsAppLogo } from "./icons";
 
 
 export const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <NextUINavbar className="bg-primary" isBlurred={false} maxWidth="xl" position="sticky">
+        <NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className="bg-primary" isBlurred={false} maxWidth="xl" position="sticky">
             <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
-                <NavbarBrand as="li" className="gap-3 max-w-fit">
+                <NavbarBrand as="li" className="gap-3 max-w-fit md:pl-56">
                     <NextLink
                         className="flex justify-start items-center"
                         href="/"
@@ -79,7 +83,7 @@ export const Navbar = () => {
                     href={`https://wa.me/+56987060388?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊`}
                     endContent={<WhatsAppLogo />}
                 >
-                    Reserva por WhatsApp
+                    Reserva
                 </Button>
                 <NavbarMenuToggle />
             </NavbarContent>
@@ -88,7 +92,7 @@ export const Navbar = () => {
                 <div className="mx-4 mt-2 flex flex-col gap-2">
                     {siteConfig.navMenuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link color="primary" href={item.href} size="lg">
+                            <Link color="primary" onClick={() => { setIsMenuOpen(false) }} href={item.href} size="lg">
                                 {item.label}
                             </Link>
                         </NavbarMenuItem>
