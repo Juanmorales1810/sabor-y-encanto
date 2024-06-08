@@ -127,7 +127,7 @@ export default function Home() {
 						<Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30" src="/platos/fotos oficiales.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 					</div>
 					<div className="flex flex-col gap-2 justify-center text-right md:w-96">
-						<h2 className="text-4xl text-primary-500 font-semibold px-2">Anticuchos</h2>
+						<h2 className="text-4xl text-primary-500 font-semibold px-2">Lomo saltado</h2>
 						<p className="text-xl px-2">Corazón de res marinado y asado, servido con papas doradas y ají.
 						</p>
 					</div>
