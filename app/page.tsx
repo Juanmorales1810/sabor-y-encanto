@@ -9,57 +9,34 @@ import { CallIcon, GpsIcon, WhatsAppLogo } from "@/components/icons";
 const menu = [
 	{
 		quote:
-			"It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-		name: "Charles Dickens",
-		title: "A Tale of Two Cities",
+			"Arroz frito con salsa de soya, mariscos frescos y tortilla de huevo.",
+		name: "Arroz Chaufa de Mariscos",
+		imageSrc: "/platos/fotos oficiales-12.jpg",
 	},
 	{
 		quote:
-			"To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-		name: "William Shakespeare",
-		title: "Hamlet",
+			"Tallarines en salsa huancaína, filete de lomo liso saltado con cebolla morada, tomate y papa hilo .",
+		name: "Tallarines huancaína con lomo saltado",
+		imageSrc: "/platos/fotos oficiales-22.jpg",
 	},
 	{
-		quote: "All that we see or seem is but a dream within a dream.",
-		name: "Edgar Allan Poe",
-		title: "A Dream Within a Dream",
-	},
-	{
-		quote:
-			"It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-		name: "Jane Austen",
-		title: "Pride and Prejudice",
+		quote: "Filete de pescado reineta pasada en una salsa y a freír acompañado con papa frita o ensalada y papas hilo.",
+		name: "Chicharrones de pescado",
+		imageSrc: "/platos/fotos oficiales-36.jpg",
 	},
 	{
 		quote:
-			"Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-		name: "Herman Melville",
-		title: "Moby-Dick",
+			"Filete de pescado en cubitos en jugo de limón, cebolla morada, cilantro, y su leche de tigre, acompañado con yuca, camote, mote de maíz y cancha o maíz tostado.",
+		name: "Ceviche",
+		imageSrc: "/platos/fotos oficiales-32.jpg",
 	},
 	{
 		quote:
-			"Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-		name: "Herman Melville",
-		title: "Moby-Dick",
+			"Arroz con una base de mariscos, camarones, surtido de mariscos, calamares, ostiones en salsa marinada de ají amarillo.",
+		name: "Arroz con mariscos",
+		imageSrc: "/platos/fotos oficiales-7.jpg",
 	},
-	{
-		quote:
-			"Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-		name: "Herman Melville",
-		title: "Moby-Dick",
-	},
-	{
-		quote:
-			"Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-		name: "Herman Melville",
-		title: "Moby-Dick",
-	},
-	{
-		quote:
-			"Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-		name: "Herman Melville",
-		title: "Moby-Dick",
-	},
+
 ];
 const testimonials = [
 	{
@@ -138,20 +115,20 @@ export default function Home() {
 						<Image className="absolute inset-0 z-20 blur-xl rounded-3xl object-cover w-[500] h-[300px]" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 						<Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30" src="/platos/fotos oficiales-32.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 					</div>
-					<div className="flex flex-col gap-2 w-96 justify-center text-left">
+					<div className="flex flex-col gap-2 justify-center text-left md:w-96">
 						<h2 className="text-4xl text-primary-500 font-semibold px-2">Ceviche Fresco</h2>
-						<p className="text-2xl px-2">Pescado del día marinado en jugo de limón, acompañado de camote y choclo.
+						<p className="text-xl px-2">Pescado del día marinado en jugo de limón, acompañado de camote y choclo.
 						</p>
 					</div>
 				</div>
-				<div className="flex flex-col justify-between gap-4 w-full max-w-5xl md:flex-row-reverse md:gap-0">
+				<div className="flex flex-col justify-between gap-4 w-full max-w-5xl px-2 md:flex-row-reverse md:gap-0">
 					<div className="relative">
 						<Image className="absolute inset-0 z-20 blur-xl rounded-3xl object-cover w-[500] h-[300px]" src="/platos/fotos oficiales.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 						<Image className="relative rounded-3xl object-cover w-[500] h-[300px] z-30" src="/platos/fotos oficiales.jpg" alt="Logo Sabor y encanto" width={500} height={300} />
 					</div>
-					<div className="flex flex-col gap-2 w-96 justify-center text-right">
+					<div className="flex flex-col gap-2 justify-center text-right md:w-96">
 						<h2 className="text-4xl text-primary-500 font-semibold px-2">Anticuchos</h2>
-						<p className="text-2xl px-2">Corazón de res marinado y asado, servido con papas doradas y ají.
+						<p className="text-xl px-2">Corazón de res marinado y asado, servido con papas doradas y ají.
 						</p>
 					</div>
 				</div>
