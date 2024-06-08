@@ -7,8 +7,8 @@ export default function footer() {
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <Link href="https://flowbite.com/" className="flex items-center">
-                            <Image src="/logos/LOGO SABOR Y ENCANTO FINAL 2.png" width={128} height={128} className="h-32 me-3 mt-4" alt="Logo Peru" />
+                        <Link href="/" className="flex items-center">
+                            <Image src="/logos/LOGO SABOR Y ENCANTO FINAL 2.png" width={128} height={128} className="h-32 me-3 mt-4" alt="Logo Sabor y encanto" />
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -16,10 +16,10 @@ export default function footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contactanos</h2>
                             <ul className="text-secondary-500 font-medium">
                                 <li className="mb-4">
-                                    <Link href="https://flowbite.com/" className="hover:underline">WhatsApp</Link>
+                                    <Link href="tel:+56987060388" className="hover:underline">Teléfono</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://tailwindcss.com/" className="hover:underline">unejemplo@gmail.com</Link>
+                                    <Link href="mailto:restaurantsaboryencanto@gmail.com" className="hover:underline">Email</Link>
                                 </li>
                             </ul>
                         </div>
@@ -27,10 +27,13 @@ export default function footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Síguenos</h2>
                             <ul className="text-secondary-500 font-medium">
                                 <li className="mb-4">
-                                    <Link href="https://github.com/themesberg/flowbite" className="hover:underline ">Instagram</Link>
+                                    <Link target="_blank" href={`https://wa.me/+56987060388?text=Hola!%20Me%20gustaria%20hacer%20una%20reserva.%20Tenes%20alguna%20reservacion%20disponible?%20Muchas%20gracias!😊`} className="hover:underline">WhatsApp</Link>
+                                </li>
+                                <li className="mb-4">
+                                    <Link href="#" className="hover:underline ">Instagram</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">Facebook</Link>
+                                    <Link href="#" className="hover:underline">Facebook</Link>
                                 </li>
                             </ul>
                         </div>
@@ -49,7 +52,7 @@ export default function footer() {
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-secondary lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-secondary-500 sm:text-center dark:text-secondary">© {new Date().getFullYear()} <Link href="https://flowbite.com/" className="hover:underline">Sabor y Encanto™</Link>. All Rights Reserved.
+                    <span className="text-sm text-secondary-500 sm:text-center dark:text-secondary">© {new Date().getFullYear()} <Link href="/" className="hover:underline">Sabor y Encanto™</Link>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <Link href="#" className="text-secondary-500 hover:text-gray-900 dark:hover:text-white">
