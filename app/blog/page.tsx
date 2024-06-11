@@ -7,7 +7,7 @@ export default function BlogPage() {
 		<section className="text-center">
 			<h1 className={title()}>Blogs</h1>
 			<p></p>
-			<div className="flex flex-row gap-4 py-10">
+			<div className="flex flex-row gap-2 py-10 md:gap-4">
 				{
 					blogPosts.map((blog) => (
 						<CardBlog
