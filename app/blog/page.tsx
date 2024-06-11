@@ -11,6 +11,7 @@ export default function BlogPage() {
 				{
 					blogPosts.map((blog) => (
 						<CardBlog
+							key={blog.slug}
 							srcImg={blog.imageCard}
 							title={blog.titulo}
 							slug={blog.slug}
