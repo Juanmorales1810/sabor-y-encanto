@@ -8,7 +8,7 @@ export default function footer() {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <Link href="/" className="flex items-center">
-                            <Image src="/logos/LOGO SABOR Y ENCANTO FINAL 2.png" width={128} height={128} className="h-32 me-3 mt-4" alt="Logo Sabor y encanto" />
+                            <Image src="/logos/LOGO SABOR Y ENCANTO FINAL 2.webp" width={128} height={128} className="h-32 me-3 mt-4" alt="Logo Sabor y encanto" />
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
