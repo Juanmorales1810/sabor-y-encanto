@@ -61,7 +61,7 @@ export default function Home() {
 		<section className="flex flex-col items-center justify-center w-full h-full min-h-[calc(100vh-64px)] overflow-hidden">
 			<section className="relative flex w-full h-[calc(100vh-64px)] justify-center">
 				<div className="absolute inset-0 bg-zinc-950/80 flex flex-col justify-center items-center px-2 z-20 md:w-1/2 md:relative md:bg-transparent">
-					<Image className="pb-6" src="/logos/LOGO SABOR Y ENCANTO FINAL 2.png" alt="Logo Sabor y encanto" width={300} height={300} />
+					<Image className="pb-6" src="/logos/LOGO SABOR Y ENCANTO FINAL 2.webp" alt="Logo Sabor y encanto" width={300} height={300} />
 					<h1 className="text-primary text-2xl text-center pb-4"><strong className="text-4xl">Restaurante Sabor y Encanto</strong><br /><small>La Auténtica Gastronomía Peruana en La Serena, Chile</small></h1>
 					<h2 className="text-center text-secondary pb-2">Disfruta de una Experiencia Culinaria Única con los Sabores Tradicionales de Perú
 					</h2>
