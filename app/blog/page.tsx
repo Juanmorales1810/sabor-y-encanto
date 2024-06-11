@@ -1,10 +1,24 @@
+import CardBlog from "@/components/cardBlog";
 import { title } from "@/components/primitives";
+import { blogPosts } from "@/config/blogPost";
 
 export default function BlogPage() {
 	return (
-		<div className="text-center">
-			<h1 className={title()}>Blog</h1>
-			<p className="text-2xl pt-4">&#128679;Esta pagina esta en proceso&#128679;</p>
-		</div>
+		<section className="text-center">
+			<h1 className={title()}>Blogs</h1>
+			<p></p>
+			<div className="flex flex-row gap-4 py-10">
+				{
+					blogPosts.map((blog) => (
+						<CardBlog
+							srcImg={blog.imageCard}
+							title={blog.titulo}
+							slug={blog.slug}
+						/>
+					))
+				}
+			</div>
+
+		</section>
 	);
 }
